@@ -1,0 +1,6 @@
+%h1 Article#edit
+
+= form_for @article do |f| 
+  = f.text_field :title
+  = f.text_area :body, rows: 20
+  = f.submit "Save", class: 'btn'

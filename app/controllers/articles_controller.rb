@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @topic.update_attributes(params[:article])
+    if @article.update_attributes(params[:article])
       redirect_to @article
     else
       render :edit 
