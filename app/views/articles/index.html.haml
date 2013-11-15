@@ -1,7 +1,12 @@
-%h1 Articles
+.container
+  %div{class:"eight columns"}
+
+    %h1 Articles
 
 
-- @articles.each do |article|
-%h4= link_to article.title, article 
-%small= link_to "Edit", edit_article_path(article)
-= link_to "New Article", new_article_path, class: 'btn'
+    -.@articles.each do |article|
+      %h4= link_to article.title, article 
+      %small= link_to "Edit", edit_article_path(article)
+    %br
+    %br
+    = link_to "New Article", new_article_path, class: 'button'

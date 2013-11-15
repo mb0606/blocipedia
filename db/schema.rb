@@ -11,13 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131112233913) do
+ActiveRecord::Schema.define(:version => 20131114210346) do
 
-  create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.string   "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+# Could not dump table "articles" because of following StandardError
+#   Unknown type 'belongs_to' for column 'wiki_id'
+
+  create_table "wikis", :force => true do |t|
+    t.string   "subject"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

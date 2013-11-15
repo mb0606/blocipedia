@@ -1,7 +1,10 @@
-%h1 New Article
+.container
+  %div{class:"eight columns"}
 
-= form_for @article do |f|
-  = f.text_field :title
-  = f.text_area :body, rows: 20
-  = f.submit "Save", class: 'btn'
+    %h1 New Article
+
+    = form_for [@wiki,@article] do |f|
+      = f.text_field :title
+      = f.text_area :body, rows: 20
+      = f.submit "Save", class: 'btn'
  
