@@ -29,3 +29,21 @@
  .wrapper {
 min-width: 954px;
 }
+h4 small {font-size: 9px}
+
+
+h2 {padding-left: 10px;
+    padding-top: 5px;
+    font-family: ariel;
+  }
+ul .navt
+{
+list-style-type:none;
+margin:0;
+padding:5;
+}
+ul .nav
+{
+display:inline;
+padding-right: 10px;
+}

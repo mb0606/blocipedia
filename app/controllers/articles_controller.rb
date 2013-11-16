@@ -32,9 +32,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @wiki = Wiki.find(params[:wiki_id]
+    @wiki = Wiki.find(params[:wiki_id])
     @article = Article.new(params[:article])
-    @article.wiki = @article
+    @article.wiki = @wiki
     if @article.save
       redirect_to [@wiki,@article]
     else
@@ -43,6 +43,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    @wiki = Wiki.find(params[:wiki_id])
     @article = Article.find(params[:id])
     if @article.destroy
       redirect_to @wiki ##redirect_to[@wiki,:articles] or wiki_articles_path(@wiki)
