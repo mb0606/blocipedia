@@ -9,5 +9,5 @@
     %br
     %ul
       - @wiki.articles.each do |article|
-        %li= link_to article.title, wiki_article_path(@wiki,article)
+        %li= link_to (markdown article.title), wiki_article_path(@wiki,article)
         
