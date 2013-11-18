@@ -1,0 +1,8 @@
+
+development:
+  SENDGRID_USERNAME: "app19505405@heroku.com"
+  SENDGRID_PASSWORD: "w29itoke"
+  
+production:
+  SENDGRID_USERNAME: "app19505405@heroku.com"
+  SENDGRID_PASSWORD: "w29itoke"

@@ -7,6 +7,9 @@ class ArticlesController < ApplicationController
   def show
     @wiki = Wiki.find(params[:wiki_id])
     @article = Article.find(params[:id])
+    if request.path != wiki_article_path(@wiki,@article)
+      redirect_to [@wiki,@article], status: :moved_permanently
+    end
   end
 
   def new
@@ -25,8 +28,10 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.update_attributes(params[:article])
       ##params is == to the hash article not just one column 
+      flash[:notice] = "Article was updated."
       redirect_to [@wiki,@article]
     else
+      flash[:error] = "There was an error saving the article. Please try again."
       render :edit 
     end
   end
@@ -36,8 +41,10 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     @article.wiki = @wiki
     if @article.save
+      flash[:notice] = "Article was saved."
       redirect_to [@wiki,@article]
     else
+      flash[:error] = " There was an error saving the article. Please try again."
       render :new
     end
   end
@@ -45,9 +52,13 @@ class ArticlesController < ApplicationController
   def destroy
     @wiki = Wiki.find(params[:wiki_id])
     @article = Article.find(params[:id])
+    title = @article.title
     if @article.destroy
+      flash[:notice] = "\"#{title}\" was deleted successfully."
       redirect_to @wiki ##redirect_to[@wiki,:articles] or wiki_articles_path(@wiki)
-    else                ##/wikis/:wiki_id/articles 
+    else
+      flash[:error] = "\"#{title}\" was deleted successfully."
+                    ##/wikis/:wiki_id/articles 
       render :show
     end
   end 
