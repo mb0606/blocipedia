@@ -28,7 +28,14 @@ require 'faker'
     end
   end
 
-
+u = User.new(
+  first_name: 'Marco',
+  last_name: 'Berardini',
+  email: 'marcoberardini@gmail.com', 
+  password: 'password', 
+  password_confirmation: 'password')
+u.skip_confirmation!
+u.save
 
 puts "Seed finished"
 puts "#{User.count} users created"

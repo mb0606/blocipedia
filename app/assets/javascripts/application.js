@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function() {
+  $('textarea').keyup(function(){
+    var value = $(this).val();
+    $("p").html(value)
+  })
+})
+.keyup();

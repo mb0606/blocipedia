@@ -26,9 +26,9 @@
   padding-left: 40px;
   padding-right: 40px;
  }
- .wrapper {
-min-width: 954px;
-}
+ .container .eight.columns {
+  -align: center
+ }
 h4 small {font-size: 9px}
 
 
