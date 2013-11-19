@@ -14,9 +14,12 @@
 //= require jquery_ujs
 //= require_tree .
 $(document).ready(function() {
+  $('form.subject').keyup(function(){
+    var value = $(this).val();
+    $("preview.title").html(value);
+  })
   $('textarea').keyup(function(){
     var value = $(this).val();
-    $("p").html(value)
+    $("preview.body").html(value);
   })
 })
-.keyup();

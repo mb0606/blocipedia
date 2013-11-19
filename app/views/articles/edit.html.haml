@@ -1,11 +1,6 @@
 .container
-  %div{class:"eight columns"}
 
-    %h1 Edit Article 
 
-    = form_for [@wiki,@article] do |f| 
-      / you can also write @article.wiki,@article because of belongs_to 
-      / wiki is wiki_id that we are refering to in the instance 
-      = f.text_field :title
-      = f.text_area :body, rows: 20
-      = f.submit "Save", class: 'btn'
+  %h1 Edit Article 
+
+  = render partial: 'form', locals: { wiki: @wiki, article: @article }

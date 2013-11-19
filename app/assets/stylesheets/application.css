@@ -36,14 +36,52 @@ h2 {padding-left: 10px;
     padding-top: 5px;
     font-family: ariel;
   }
-ul .navt
-{
-list-style-type:none;
-margin:0;
-padding:5;
+
+ .body, .title {
+  border: 1px solid #ccc;
+  width:220px;
+  max-width: 100%;
+  display: block;
+
 }
-ul .nav
-{
-display:inline;
-padding-right: 10px;
+
+.title {
+  min-height: 20px;
+  padding: 6px 4px;
+  outline: none;
+  -webkit-border-radius: 2px;
+  -webkit-appearance: textfield;
+  color: #777;
+  margin: 0;
+  margin-bottom: 20px;
+
+}
+.body {
+  min-height: 300px;
+  padding: 6px 4px;
+  outline: none;
+  -webkit-border-radius: 2px;
+  -webkit-appearance: textfield;
+  color: #777;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+
+
+
+.leftbox,
+.rightbox {
+  width: 300px;
+
+}
+
+.leftbox {
+  float: left;
+  background-color: green;
+}
+
+.rightbox {
+  float: right;
+  background-color: green;
 }
