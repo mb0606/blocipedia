@@ -5,7 +5,7 @@
 
 
     - @articles.each do |article|
-      %h4= link_to article.title, article 
+      %h4= link_to (markdown article.title), article 
       %small= link_to "Edit", edit_article_path(article)
     %br
     %br
