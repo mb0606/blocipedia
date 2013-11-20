@@ -1,7 +1,7 @@
 .eight.columns
   = form_for wiki do |f|
-    = f.text_field :subject, class: "subject"
-    = f.text_area :description, rows: 20
+    = f.text_field :subject, class: "title"
+    = f.text_area :description, rows: 20, class: "body"
     = f.submit "Save", class: 'btn'
 .eight.columns
   .preview

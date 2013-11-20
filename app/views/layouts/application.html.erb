@@ -10,17 +10,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h2><strong>BLOCEPDI</strong></h2>
 <div class="container">
+    <h2><strong>BLOCEPDI</strong></h2>
     <div class='row'>
-      <ul class='nav'>
 
-        <div>
+        <nav>
+        
           <li ><%= link_to "Blocepdia", root_path%></li>
           <li ><%= link_to "Wiki", wikis_path%></li>
-        </div>
+        
 
-        <div class= "offset-by-ten">
+        <div class= "offset-by-eight">
           <%if current_user %>
             Hello <%= current_user.email %>! <%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
           <%else%>
@@ -29,7 +29,7 @@
           <%end%>
 
         </div>        
-      </ul>
+      </nav>
     </div>
 
 <%= yield %>

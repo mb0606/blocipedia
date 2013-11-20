@@ -1,12 +1,13 @@
 .container
-  %div{class:"eight columns"}
-
-    %h1 Articles
 
 
+  %h1 Articles
+
+  .row
+    .columns.eight
     - @articles.each do |article|
       %h4= link_to (markdown article.title), article 
       %small= link_to "Edit", edit_article_path(article)
-    %br
-    %br
-    = link_to "New Article", new_article_path, class: 'button'
+    
+    .columns.four
+      = link_to "New Article", new_article_path, class: 'button'

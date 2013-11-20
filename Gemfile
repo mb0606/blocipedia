@@ -30,6 +30,8 @@ gem 'friendly_id'
 gem 'faker'
 gem 'devise'
 gem 'redcarpet'
+gem 'marked-rails'
+gem "pundit"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

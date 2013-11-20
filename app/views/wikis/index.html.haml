@@ -1,12 +1,14 @@
 .container
-  %div{class:"eight columns"}
 
-    %h1 Wikis
+  %h1 Wikis
 
-    .row
+  .row
+    .columns.eight
       -@wikis.each do |wiki|
         %h4
           = link_to wiki.subject, wiki
           %small= link_to "Edit", edit_wiki_path(wiki)
       
-    = link_to "New Wiki", new_wiki_path, class: 'button'
+    .columns.two
+      -if policy(@wiki).create?
+        = link_to "New Wiki", new_wiki_path, class: 'button'

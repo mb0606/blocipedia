@@ -19,23 +19,30 @@
  *= require layout
  *= require skeleton
  */
+.columns.eight {
+  background-color: #B0C4DE;
+}
+.columns.five {
+  background-color: #C0C0C0;
+}
+.columns.two {
+  background-color: #C0C0C0;
+}
 
- .container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
- }
- .container .eight.columns {
-  -align: center
- }
+
 h4 small {font-size: 9px}
+
 
 
 h2 {padding-left: 10px;
     padding-top: 5px;
     font-family: ariel;
   }
+  a:link {
+      text-decoration:none;
+          } 
+  a:hover {color:#000000;}
+
 
  .body, .title {
   border: 1px solid #ccc;
@@ -54,6 +61,12 @@ h2 {padding-left: 10px;
   color: #777;
   margin: 0;
   margin-bottom: 20px;
+  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  f
+  
 
 }
 .body {
@@ -65,9 +78,19 @@ h2 {padding-left: 10px;
   color: #777;
   margin: 0;
   margin-bottom: 20px;
+  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  
+  l
 }
 
-
+ nav li {
+  margin-right: 7px;
+  display:inline;
+  /*background-color:#777;*/
+}
 
 
 .leftbox,
