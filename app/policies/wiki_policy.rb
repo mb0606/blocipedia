@@ -13,11 +13,11 @@ class WikiPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(:id => wiki.id).exists?
   end
 
   def create?
-    user.admin? or not post.published?
+    true
   end
 
   def new?
@@ -25,7 +25,7 @@ class WikiPolicy
   end
 
   def update?
-    user.admin? or not post.published?
+    false
   end
 
   def edit?
@@ -37,7 +37,7 @@ class WikiPolicy
   end
 
   def scope
-    Pundit.policy_scope!(user, record.class)
+    Pundit.policy_scope!(user, wiki.class)
   end
 end
 

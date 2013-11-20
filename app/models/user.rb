@@ -8,5 +8,8 @@ class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-  has_many :wikis
+  has_many :roles
+  has_many :wikis, through: :roles
+
+  
 end

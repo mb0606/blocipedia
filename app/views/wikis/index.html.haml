@@ -10,5 +10,5 @@
           %small= link_to "Edit", edit_wiki_path(wiki)
       
     .columns.two
-      -if policy(@wiki).create?
+      -if policy(Wiki.new).create?
         = link_to "New Wiki", new_wiki_path, class: 'button'
